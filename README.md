@@ -1,6 +1,25 @@
 # ModCord
 A discord client created from the ground up.
 
+This is the CLI-rewrite branch. This branch is a CLI version of ModCord, as the GUI is too challenging!
+
+## READ THIS:
+(technical jargon, tl;dr at the end)
+
+Due to how discord works with the `resume` OP code, I can't find a way to call it if someone has previously used
+the official client.
+(How would we know the last sequence value??? or last session!) This is a bold assumption and untested
+in the future I will see if there is any possible way around it or if it will accept outdated values.
+Without this
+method, we can't get a replay of many previous events. 
+
+Based on research conducted by me I was unable to get the resume method working.
+
+^ we are currently testing the `resume` method and seeing if we can get to replay without proper values.
+
+TL;DR:
+You won't get previous notifications if you close ModCord, go to the official client, then reopen ModCord
+
 ## THIS PROJECT IS CURRENTLY ONLY THE MINIMAL VIABLE PRODUCT, MISSING HUNDREDS QOL AND DESIGN FEATURES!
 ### it's also missing many core features when stuff goes wrong! (whoops)
 
@@ -15,16 +34,10 @@ This client requires hours of work and reverse engineering to figure out how the
 ## Development
 **PLEASE** submit pull requests, issues, and anything you can do the support the development.
 
-**PLEASE** help with the UI, I will most likely even accept pull requests to just rewrite the entire thing, 
+**PLEASE** help with the CLI, I will most likely even accept pull requests to just rewrite the entire thing, 
 it is awful and is terrible from a design aspect.
 
-Please suggest any ideas on the GitHub or the [Official Discord Server](https://discord.gg/Fr8z9JnVpP)
+Please suggest any ideas on the GitHub or the ~~Official Discord Server~~ (no longer exists)
 
 ### **CURRENT WIP AND HAS MANY BUGS**
-
-TODO:
-1. rewrite so that rendering is done in the main loop while everything has its own thread
-   (this is due to a PYGAME limitation, not ours)
-2. create login
-3. create an interface that can switch channels and read from them
-   1. add sending messages later
+(check the bug tracker!)
