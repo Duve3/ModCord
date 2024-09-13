@@ -86,11 +86,14 @@ class Websocket:
 
                 match data["op"]:
                     # https://discord.com/developers/docs/topics/opcodes-and-status-codes#gateway-gateway-opcodes
+                    case 0:  # Event Dispatch
+                        pass
+                    
                     case 1:  # Heartbeat
                         # this means discord is wanting a heartbeat right now :rage:
                         ev.dispatch_event(ev.HeartbeatForced())
 
-                    case 0 | 2 | 3 | 4 | 5 | 6 | 8:  # 5 currently is non-existent in documentation, assumed missing
+                    case 2 | 3 | 4 | 5 | 6 | 8:  # 5 currently is non-existent in documentation, assumed missing
                         # these are ALL sending events, and should never be sent our direction!
                         pass
 

@@ -1,5 +1,6 @@
 """
 Heartbeat event system
+Websocket -> Heartbeat
 All evens are for websocket side, all odds are for heartbeat side
 """
 
