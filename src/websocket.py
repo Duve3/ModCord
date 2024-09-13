@@ -102,8 +102,8 @@ class Websocket:
                         # TODO: uhh what to do when
                         pass
 
-                    case 10:  # we can ignore this due to how we get hello up top!
+                    case 10:  # Hello - we can ignore this due to how we get hello up top!
                         pass
 
-                    case 11:  # most likely not necessary to read?
+                    case 11:  # Heartbeat Ack - most likely not necessary to read?
                         pass
